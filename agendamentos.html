@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Agendamentos — ClínicaPETMais</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand small">
+        <svg class="logo" width="44" height="44" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#2c98a8"/>
+        </svg>
+        <div>
+          <h1 class="brand-title">ClínicaPETMais</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="agendamentos.html" class="active">Agendamentos</a>
+        <a href="loja.html">Loja</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="card-section">
+      <h2>Agendar Consulta</h2>
+
+      <form id="appointmentForm" class="form-grid" novalidate>
+        <div>
+          <label for="ownerName">Nome do tutor</label>
+          <input id="ownerName" name="ownerName" type="text" required placeholder="Seu nome">
+        </div>
+
+        <div>
+          <label for="phone">Telefone</label>
+          <input id="phone" name="phone" type="tel" required placeholder="(99) 9xxxx-xxxx">
+        </div>
+
+        <div>
+          <label for="petName">Nome do pet</label>
+          <input id="petName" name="petName" type="text" required placeholder="Nome do pet">
+        </div>
+
+        <div>
+          <label for="species">Espécie</label>
+          <select id="species" name="species" required>
+            <option value="">Selecione</option>
+            <option>Cachorro</option>
+            <option>Gato</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="service">Serviço</label>
+          <select id="service" name="service" required>
+            <option value="">Selecione</option>
+            <option>Consulta</option>
+            <option>Banho e Tosa</option>
+            <option>Vacinação</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="dateTime">Data e hora</label>
+          <input id="dateTime" name="dateTime" type="datetime-local" required>
+        </div>
+
+        <div class="fullwidth actions-row">
+          <button type="submit" class="btn">Agendar</button>
+          <button type="reset" class="btn btn-outline">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card-section appointments-list">
+      <h2>Próximos Agendamentos</h2>
+      <ul id="appointmentsList" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year2">2025</span> ClínicaPETMais</small>
+    </div>
+  </footer>
+
+  <script src="Js/shared.js" defer></script>
+  <script src="Js/agendamento.js" defer></script>
+</body>
+</html>
